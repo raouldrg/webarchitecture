@@ -1,0 +1,31 @@
+{
+    "name": "eco-impact-tracker",
+    "version": "1.0.0",
+    "description": "ECO Impact Tracker - Full Stack Application",
+    "scripts": {
+        "cleanup:ports": "./scripts/cleanup-ports.sh",
+        "dev": "node scripts/dev-runner.mjs",
+        "dev:backend": "./scripts/start-backend.sh",
+        "dev:frontend": "cd ../eco-impact-tracker-frontend && npm run dev -- --clearScreen false",
+        "start:postgres": "brew services start postgresql@15",
+        "stop:postgres": "brew services stop postgresql@15",
+        "check:postgres": "brew services list | grep postgresql@15"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/eco-impact-tracker"
+    },
+    "keywords": [
+        "eco",
+        "carbon",
+        "tracker",
+        "spring-boot",
+        "react",
+        "vite"
+    ],
+    "author": "",
+    "license": "MIT"
+}

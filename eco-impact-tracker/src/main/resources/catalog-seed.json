@@ -1,0 +1,1544 @@
+{
+    "activityTypes": [
+        {
+            "name": "Transport",
+            "unit": "km",
+            "description": "Déplacements personnels et professionnels"
+        },
+        {
+            "name": "Énergie",
+            "unit": "kWh",
+            "description": "Consommation électrique, gaz, fioul"
+        },
+        {
+            "name": "Alimentation",
+            "unit": "kg",
+            "description": "Produits alimentaires et boissons"
+        },
+        {
+            "name": "Achats",
+            "unit": "item",
+            "description": "Biens de consommation et équipements"
+        },
+        {
+            "name": "Numérique",
+            "unit": "h",
+            "description": "Services numériques et streaming"
+        },
+        {
+            "name": "Déchets",
+            "unit": "kg",
+            "description": "Gestion et traitement des déchets"
+        },
+        {
+            "name": "Logement",
+            "unit": "m²",
+            "description": "Construction, rénovation, entretien"
+        },
+        {
+            "name": "Services",
+            "unit": "unit",
+            "description": "Livraison, services divers"
+        }
+    ],
+    "templates": [
+        {
+            "name": "Voiture essence",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.193,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Voiture diesel",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.161,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Voiture électrique",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.020,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Voiture hybride",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.102,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Voiture hybride rechargeable",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.060,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Voiture GPL",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.174,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Moto > 750cc",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.191,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Moto 125-750cc",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.089,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Scooter thermique",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.063,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Scooter électrique",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.007,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Bus urbain",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.103,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Bus interurbain",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.044,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Autocar longue distance",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.030,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Tramway",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.006,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Métro",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.005,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "RER / Train de banlieue",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.008,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "TER",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.030,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "TGV",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.003,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Intercités",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.011,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Eurostar / Thalys",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.006,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Avion court-courrier (< 1000 km)",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.258,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Avion moyen-courrier (1000-3500 km)",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.187,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Avion long-courrier (> 3500 km)",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.152,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Avion classe affaires",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.420,
+            "source": "UK DEFRA 2023"
+        },
+        {
+            "name": "Taxi / VTC",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.220,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Vélo (fabrication amortie)",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.005,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Vélo électrique",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.011,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Trottinette électrique",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.015,
+            "source": "Estimation"
+        },
+        {
+            "name": "Marche à pied",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.000,
+            "source": "N/A"
+        },
+        {
+            "name": "Ferry / Navette maritime",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.267,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Croisière",
+            "activityType": "Transport",
+            "defaultUnit": "jour",
+            "co2Factor": 250.0,
+            "source": "Estimation moyenne"
+        },
+        {
+            "name": "Covoiturage (2 personnes)",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.097,
+            "source": "ADEME - voiture/2"
+        },
+        {
+            "name": "Covoiturage (3 personnes)",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.065,
+            "source": "ADEME - voiture/3"
+        },
+        {
+            "name": "Covoiturage (4 personnes)",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.048,
+            "source": "ADEME - voiture/4"
+        },
+        {
+            "name": "Camionnette / Utilitaire",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.267,
+            "source": "UK DEFRA 2023"
+        },
+        {
+            "name": "Camping-car",
+            "activityType": "Transport",
+            "defaultUnit": "km",
+            "co2Factor": 0.350,
+            "source": "Estimation"
+        },
+        {
+            "name": "Électricité France",
+            "activityType": "Énergie",
+            "defaultUnit": "kWh",
+            "co2Factor": 0.052,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Électricité Allemagne",
+            "activityType": "Énergie",
+            "defaultUnit": "kWh",
+            "co2Factor": 0.350,
+            "source": "European Environment Agency"
+        },
+        {
+            "name": "Électricité Europe moyenne",
+            "activityType": "Énergie",
+            "defaultUnit": "kWh",
+            "co2Factor": 0.276,
+            "source": "EEA 2023"
+        },
+        {
+            "name": "Gaz naturel",
+            "activityType": "Énergie",
+            "defaultUnit": "kWh",
+            "co2Factor": 0.205,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Fioul domestique",
+            "activityType": "Énergie",
+            "defaultUnit": "L",
+            "co2Factor": 3.17,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Propane / Butane",
+            "activityType": "Énergie",
+            "defaultUnit": "kg",
+            "co2Factor": 3.03,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Bois bûches",
+            "activityType": "Énergie",
+            "defaultUnit": "kg",
+            "co2Factor": 0.030,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Granulés bois (pellets)",
+            "activityType": "Énergie",
+            "defaultUnit": "kg",
+            "co2Factor": 0.025,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Charbon",
+            "activityType": "Énergie",
+            "defaultUnit": "kg",
+            "co2Factor": 2.93,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Réseau de chaleur",
+            "activityType": "Énergie",
+            "defaultUnit": "kWh",
+            "co2Factor": 0.107,
+            "source": "ADEME moyenne France"
+        },
+        {
+            "name": "Climatisation (été)",
+            "activityType": "Énergie",
+            "defaultUnit": "h",
+            "co2Factor": 0.150,
+            "source": "Estimation 3kW moyen"
+        },
+        {
+            "name": "Chauffage électrique",
+            "activityType": "Énergie",
+            "defaultUnit": "h",
+            "co2Factor": 0.100,
+            "source": "Estimation 2kW moyen"
+        },
+        {
+            "name": "Pompe à chaleur",
+            "activityType": "Énergie",
+            "defaultUnit": "kWh",
+            "co2Factor": 0.017,
+            "source": "ADEME - COP moyen 3"
+        },
+        {
+            "name": "Chauffe-eau solaire",
+            "activityType": "Énergie",
+            "defaultUnit": "kWh",
+            "co2Factor": 0.010,
+            "source": "Estimation faible"
+        },
+        {
+            "name": "Panneau photovoltaïque (autoconso)",
+            "activityType": "Énergie",
+            "defaultUnit": "kWh",
+            "co2Factor": 0.025,
+            "source": "ADEME fabrication amortie"
+        },
+        {
+            "name": "Bœuf",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 26.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Bœuf bio",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 23.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Veau",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 20.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Agneau",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 31.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Porc",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 5.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Porc bio",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 4.8,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Poulet",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 4.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Poulet bio / Label Rouge",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 3.8,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Dinde",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 4.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Canard",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 5.2,
+            "source": "Estimation"
+        },
+        {
+            "name": "Lapin",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 5.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Poisson frais (mer)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 5.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Poisson d'élevage (saumon)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 6.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Crevettes",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 14.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Thon en conserve",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 4.2,
+            "source": "Estimation"
+        },
+        {
+            "name": "Sardines",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 2.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Œufs (douzaine)",
+            "activityType": "Alimentation",
+            "defaultUnit": "douzaine",
+            "co2Factor": 2.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Œufs bio",
+            "activityType": "Alimentation",
+            "defaultUnit": "douzaine",
+            "co2Factor": 1.8,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Lait",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 1.32,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Lait bio",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 1.20,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Fromage à pâte dure",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 9.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Fromage à pâte molle",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 6.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Yaourt",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 1.8,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Beurre",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 9.8,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Crème fraîche",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 4.5,
+            "source": "Estimation"
+        },
+        {
+            "name": "Riz",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 2.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Pâtes",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 1.2,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Pain",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.8,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Pommes de terre",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.2,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Tomates (saison)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.4,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Tomates (hors saison / serre chauffée)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 3.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Carottes",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.25,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Salade verte",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.3,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Courgettes",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.3,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Haricots verts",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Poivrons",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Oignons",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.2,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Avocats (importés)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 1.3,
+            "source": "Estimation transport avion"
+        },
+        {
+            "name": "Bananes",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.9,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Pommes (France)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.3,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Oranges",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.4,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Mangues (avion)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 9.0,
+            "source": "Transport aérien"
+        },
+        {
+            "name": "Fraises (saison)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.4,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Fraises (hors saison)",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 3.0,
+            "source": "Serre chauffée"
+        },
+        {
+            "name": "Chocolat",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 4.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Café",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 5.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Thé",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 3.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Sucre",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.6,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Huile d'olive",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 3.3,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Huile de tournesol",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 2.5,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Vin (bouteille)",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 1.2,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Bière (bouteille)",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 0.9,
+            "source": "Estimation"
+        },
+        {
+            "name": "Jus d'orange",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 0.8,
+            "source": "Estimation"
+        },
+        {
+            "name": "Eau en bouteille",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 0.3,
+            "source": "ADEME plastique inclus"
+        },
+        {
+            "name": "Soda",
+            "activityType": "Alimentation",
+            "defaultUnit": "L",
+            "co2Factor": 0.5,
+            "source": "Estimation"
+        },
+        {
+            "name": "Tofu",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 1.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Tempeh",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 1.2,
+            "source": "Estimation"
+        },
+        {
+            "name": "Lentilles",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.8,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Pois chiches",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.8,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Haricots secs",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 0.7,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Noix",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 2.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Amandes",
+            "activityType": "Alimentation",
+            "defaultUnit": "kg",
+            "co2Factor": 3.5,
+            "source": "Forte conso eau Californie"
+        },
+        {
+            "name": "Repas végétarien",
+            "activityType": "Alimentation",
+            "defaultUnit": "repas",
+            "co2Factor": 0.5,
+            "source": "Estimation moyenne"
+        },
+        {
+            "name": "Repas avec poulet",
+            "activityType": "Alimentation",
+            "defaultUnit": "repas",
+            "co2Factor": 1.5,
+            "source": "Estimation moyenne"
+        },
+        {
+            "name": "Repas avec bœuf",
+            "activityType": "Alimentation",
+            "defaultUnit": "repas",
+            "co2Factor": 6.0,
+            "source": "Estimation moyenne"
+        },
+        {
+            "name": "Fast-food (menu complet)",
+            "activityType": "Alimentation",
+            "defaultUnit": "repas",
+            "co2Factor": 4.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Pizza",
+            "activityType": "Alimentation",
+            "defaultUnit": "pizza",
+            "co2Factor": 1.8,
+            "source": "Estimation"
+        },
+        {
+            "name": "Plat préparé surgelé",
+            "activityType": "Alimentation",
+            "defaultUnit": "plat",
+            "co2Factor": 2.0,
+            "source": "Estimation packaging + congélation"
+        },
+        {
+            "name": "T-shirt coton",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 5.3,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "T-shirt coton bio",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 4.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Jean",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 23.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Pull laine",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 28.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Manteau",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 50.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Chaussures cuir",
+            "activityType": "Achats",
+            "defaultUnit": "paire",
+            "co2Factor": 16.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Baskets",
+            "activityType": "Achats",
+            "defaultUnit": "paire",
+            "co2Factor": 12.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Robe",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 15.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Costume / Tailleur",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 35.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Sous-vêtements (lot)",
+            "activityType": "Achats",
+            "defaultUnit": "lot",
+            "co2Factor": 3.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Smartphone neuf",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 70.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Smartphone reconditionné",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 15.0,
+            "source": "ADEME -80% neuf"
+        },
+        {
+            "name": "Ordinateur portable neuf",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 300.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Ordinateur portable reconditionné",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 60.0,
+            "source": "ADEME -80% neuf"
+        },
+        {
+            "name": "Ordinateur fixe neuf",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 400.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Tablette neuve",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 100.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Tablette reconditionnée",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 20.0,
+            "source": "ADEME -80% neuf"
+        },
+        {
+            "name": "Télévision 40-55 pouces",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 350.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Console de jeux",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 100.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Écouteurs / Casque audio",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 15.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Enceinte Bluetooth",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 20.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Réfrigérateur",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 250.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Machine à laver",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 300.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Sèche-linge",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 280.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Lave-vaisselle",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 270.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Four électrique",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 120.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Micro-ondes",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 50.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Aspirateur",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 60.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Canapé",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 200.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Table en bois",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 80.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Chaise",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 30.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Lit / Matelas",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 150.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Armoire",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 120.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Vélo neuf",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 120.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Vélo électrique neuf",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 250.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Livre papier",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 1.3,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Journal / Magazine",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 0.5,
+            "source": "Estimation"
+        },
+        {
+            "name": "Jouet plastique",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 10.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Cosmétiques (flacon)",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 2.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Produit ménager (bidon)",
+            "activityType": "Achats",
+            "defaultUnit": "item",
+            "co2Factor": 1.5,
+            "source": "Estimation"
+        },
+        {
+            "name": "Streaming vidéo HD",
+            "activityType": "Numérique",
+            "defaultUnit": "h",
+            "co2Factor": 0.036,
+            "source": "IEA / Shift Project"
+        },
+        {
+            "name": "Streaming vidéo 4K",
+            "activityType": "Numérique",
+            "defaultUnit": "h",
+            "co2Factor": 0.080,
+            "source": "Estimation x2 HD"
+        },
+        {
+            "name": "Streaming audio",
+            "activityType": "Numérique",
+            "defaultUnit": "h",
+            "co2Factor": 0.007,
+            "source": "IEA / Shift Project"
+        },
+        {
+            "name": "Visioconférence",
+            "activityType": "Numérique",
+            "defaultUnit": "h",
+            "co2Factor": 0.150,
+            "source": "Estimation caméra + serveur"
+        },
+        {
+            "name": "Jeu vidéo en ligne",
+            "activityType": "Numérique",
+            "defaultUnit": "h",
+            "co2Factor": 0.050,
+            "source": "Estimation"
+        },
+        {
+            "name": "Cloud gaming",
+            "activityType": "Numérique",
+            "defaultUnit": "h",
+            "co2Factor": 0.150,
+            "source": "Estimation serveur + streaming"
+        },
+        {
+            "name": "Stockage cloud (1 Go/mois)",
+            "activityType": "Numérique",
+            "defaultUnit": "Go",
+            "co2Factor": 0.010,
+            "source": "Estimation datacenter"
+        },
+        {
+            "name": "Email standard (sans PJ)",
+            "activityType": "Numérique",
+            "defaultUnit": "email",
+            "co2Factor": 0.004,
+            "source": "ADEME"
+        },
+        {
+            "name": "Email avec pièce jointe (1 Mo)",
+            "activityType": "Numérique",
+            "defaultUnit": "email",
+            "co2Factor": 0.019,
+            "source": "ADEME"
+        },
+        {
+            "name": "Recherche Google",
+            "activityType": "Numérique",
+            "defaultUnit": "recherche",
+            "co2Factor": 0.007,
+            "source": "Google 2023"
+        },
+        {
+            "name": "Requête ChatGPT",
+            "activityType": "Numérique",
+            "defaultUnit": "requête",
+            "co2Factor": 0.004,
+            "source": "Estimation LLM"
+        },
+        {
+            "name": "Téléchargement document (1 Mo)",
+            "activityType": "Numérique",
+            "defaultUnit": "Mo",
+            "co2Factor": 0.002,
+            "source": "Estimation"
+        },
+        {
+            "name": "Navigation web (par heure)",
+            "activityType": "Numérique",
+            "defaultUnit": "h",
+            "co2Factor": 0.020,
+            "source": "Estimation moyenne"
+        },
+        {
+            "name": "Réseaux sociaux (scroll)",
+            "activityType": "Numérique",
+            "defaultUnit": "h",
+            "co2Factor": 0.025,
+            "source": "Estimation"
+        },
+        {
+            "name": "Cryptomonnaie (transaction Bitcoin)",
+            "activityType": "Numérique",
+            "defaultUnit": "transaction",
+            "co2Factor": 400.0,
+            "source": "Cambridge Bitcoin Electricity"
+        },
+        {
+            "name": "Ordures ménagères (incinération)",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": 0.470,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Ordures ménagères (enfouissement)",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": 1.000,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Recyclage plastique",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": -1.500,
+            "source": "ADEME évité"
+        },
+        {
+            "name": "Recyclage verre",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": -0.300,
+            "source": "ADEME évité"
+        },
+        {
+            "name": "Recyclage papier/carton",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": -0.800,
+            "source": "ADEME évité"
+        },
+        {
+            "name": "Recyclage métal",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": -2.000,
+            "source": "ADEME évité"
+        },
+        {
+            "name": "Compostage",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": -0.050,
+            "source": "Estimation faible"
+        },
+        {
+            "name": "Déchets électroniques (DEEE)",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": 0.500,
+            "source": "Estimation si non recyclé"
+        },
+        {
+            "name": "Textile (poubelle)",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": 0.500,
+            "source": "Estimation"
+        },
+        {
+            "name": "Textile (recyclage)",
+            "activityType": "Déchets",
+            "defaultUnit": "kg",
+            "co2Factor": -1.000,
+            "source": "Estimation évité"
+        },
+        {
+            "name": "Construction maison neuve",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 500.0,
+            "source": "ADEME moyenne"
+        },
+        {
+            "name": "Construction appartement neuf",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 400.0,
+            "source": "ADEME moyenne"
+        },
+        {
+            "name": "Rénovation légère",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 50.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Rénovation lourde",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 150.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Isolation murs",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 15.0,
+            "source": "Estimation matériaux"
+        },
+        {
+            "name": "Isolation toiture",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 12.0,
+            "source": "Estimation matériaux"
+        },
+        {
+            "name": "Fenêtres double vitrage",
+            "activityType": "Logement",
+            "defaultUnit": "fenêtre",
+            "co2Factor": 100.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Installation panneaux solaires",
+            "activityType": "Logement",
+            "defaultUnit": "kWc",
+            "co2Factor": 1000.0,
+            "source": "Fabrication amortie"
+        },
+        {
+            "name": "Peinture (pot 10L)",
+            "activityType": "Logement",
+            "defaultUnit": "pot",
+            "co2Factor": 15.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Béton",
+            "activityType": "Logement",
+            "defaultUnit": "m³",
+            "co2Factor": 250.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Bois de construction",
+            "activityType": "Logement",
+            "defaultUnit": "m³",
+            "co2Factor": 50.0,
+            "source": "ADEME (carbone stocké)"
+        },
+        {
+            "name": "Acier de construction",
+            "activityType": "Logement",
+            "defaultUnit": "kg",
+            "co2Factor": 2.0,
+            "source": "ADEME Base Carbone 2023"
+        },
+        {
+            "name": "Carrelage",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 25.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Parquet bois",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 15.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Moquette",
+            "activityType": "Logement",
+            "defaultUnit": "m²",
+            "co2Factor": 8.0,
+            "source": "Estimation"
+        },
+        {
+            "name": "Livraison colis standard (France)",
+            "activityType": "Services",
+            "defaultUnit": "colis",
+            "co2Factor": 0.500,
+            "source": "ADEME estimation"
+        },
+        {
+            "name": "Livraison colis express (24h)",
+            "activityType": "Services",
+            "defaultUnit": "colis",
+            "co2Factor": 1.200,
+            "source": "ADEME estimation x2.4"
+        },
+        {
+            "name": "Livraison internationale (avion)",
+            "activityType": "Services",
+            "defaultUnit": "colis",
+            "co2Factor": 5.000,
+            "source": "Estimation fret aérien"
+        },
+        {
+            "name": "Point relais",
+            "activityType": "Services",
+            "defaultUnit": "colis",
+            "co2Factor": 0.300,
+            "source": "Mutualisation"
+        },
+        {
+            "name": "Drive courses",
+            "activityType": "Services",
+            "defaultUnit": "commande",
+            "co2Factor": 0.800,
+            "source": "Estimation logistique"
+        },
+        {
+            "name": "Livraison repas à domicile",
+            "activityType": "Services",
+            "defaultUnit": "livraison",
+            "co2Factor": 1.500,
+            "source": "Scooter + packaging"
+        },
+        {
+            "name": "Pressing (vêtement)",
+            "activityType": "Services",
+            "defaultUnit": "item",
+            "co2Factor": 1.000,
+            "source": "Estimation produits + énergie"
+        },
+        {
+            "name": "Coiffeur",
+            "activityType": "Services",
+            "defaultUnit": "visite",
+            "co2Factor": 2.000,
+            "source": "Estimation"
+        },
+        {
+            "name": "Cinéma",
+            "activityType": "Services",
+            "defaultUnit": "séance",
+            "co2Factor": 0.300,
+            "source": "Part énergie/personne"
+        },
+        {
+            "name": "Concert / Spectacle",
+            "activityType": "Services",
+            "defaultUnit": "événement",
+            "co2Factor": 10.0,
+            "source": "Estimation moyenne"
+        },
+        {
+            "name": "Hôtel (nuit)",
+            "activityType": "Services",
+            "defaultUnit": "nuit",
+            "co2Factor": 20.0,
+            "source": "ADEME moyenne France"
+        },
+        {
+            "name": "Chambre d'hôtes",
+            "activityType": "Services",
+            "defaultUnit": "nuit",
+            "co2Factor": 8.0,
+            "source": "Estimation inférieur hôtel"
+        },
+        {
+            "name": "Camping",
+            "activityType": "Services",
+            "defaultUnit": "nuit",
+            "co2Factor": 3.0,
+            "source": "Estimation faible"
+        },
+        {
+            "name": "Location voiture (jour)",
+            "activityType": "Services",
+            "defaultUnit": "jour",
+            "co2Factor": 15.0,
+            "source": "Part amortissement + entretien"
+        },
+        {
+            "name": "Déménagement (camion)",
+            "activityType": "Services",
+            "defaultUnit": "déménagement",
+            "co2Factor": 150.0,
+            "source": "Estimation 100km moyenne"
+        }
+    ]
+}
