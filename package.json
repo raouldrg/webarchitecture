@@ -1,12 +1,17 @@
 {
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^7.3.7",
-    "@mui/material": "^7.3.7",
-    "axios": "^1.13.2",
-    "date-fns": "^4.1.0",
-    "react-router-dom": "^7.12.0",
-    "recharts": "^3.6.0"
+  "name": "eco-impact-tracker-monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev-runner.mjs",
+    "cleanup:ports": "./scripts/cleanup-ports.sh",
+    "dev:backend": "./scripts/start-backend.sh",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
